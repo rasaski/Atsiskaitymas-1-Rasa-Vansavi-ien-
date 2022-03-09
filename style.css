@@ -91,6 +91,11 @@ main .one .image img{
     
 }
 
+.three{
+    display: flex;
+    justify-content: space-between;
+    padding: 4rem;
+}
 
 
 @media only screen and (min-width:768px){
