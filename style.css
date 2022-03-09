@@ -45,7 +45,7 @@ main{
     margin: 0 auto;
 }
 
-.one{
+main .one, main .five{
     display: grid;
     grid-auto-rows: auto;
     grid-template-columns: auto;
@@ -53,7 +53,7 @@ main{
     text-align: center;
 }
 
-main .one .text h5{
+main .one .text h5, main .five .text h5{
     color: violet;
 }
 
@@ -62,24 +62,28 @@ main .one .text h1{
     text-align: left;
 }
 
-main .one .text p{
+main .one .text p, main .five .text p{
         color: grey;
         padding-bottom: 1rem;
         text-align: left;
 }
 
-main .one .text button{
+main .one .text button, main .five .text button{
     background-color: white;
-    border-radius: 0.8rem;
+    border-radius: 1.5rem;
     border-color: red;
     cursor: pointer;
     padding: 0.5rem 2rem 0.5rem 2rem;
 }
 
 
-main .one .image img{
+main .one .image img, main .five .image img{
+    display: block;
     height: 300px;
-    width: auto;
+    width: 50%;
+    padding-top: 1rem;
+    margin-left: auto;
+    margin-right: auto;
 }
 
  main .two{
@@ -147,7 +151,9 @@ main .four .four-table .days{
     text-align: right;
 }
 
-
+main .one .text h1{
+    text-align: left;
+}
 
 @media only screen and (min-width:768px){
 
@@ -170,19 +176,23 @@ main{
     padding: 2rem;
 }
 
-main .one{
+main .one, main .five{
     grid-template-columns: 1fr 1fr;
     text-align: left;
 }
 
-main .one .image img{
-    height: 500px;
+main .one .image img, main .five .image img{
+    height: 300px;
 }
 
 main .three{
     display: flex;
     justify-content: space-between;
     padding: 3rem 0 3rem 0;
+}
+
+main .four{
+    border-bottom: 1rem;
 }
 
 main .four-table{
