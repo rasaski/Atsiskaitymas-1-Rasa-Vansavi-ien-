@@ -70,10 +70,11 @@ main .one .text p, main .five .text p{
 
 main .one .text button, main .five .text button{
     background-color: white;
-    border-radius: 1.5rem;
     border-color: red;
+    border-radius: 1.5rem 1.5rem 1.5rem 1.5rem;
     cursor: pointer;
     padding: 0.5rem 2rem 0.5rem 2rem;
+    
 }
 
 
@@ -86,13 +87,21 @@ main .one .image img, main .five .image img{
     margin-right: auto;
 }
 
+main .one .text h1{
+    text-align: left;
+}
+
  main .two{
     background-image: url("/assets/assets/background.svg");
+    background-size: 100%;
     background-repeat: no-repeat;
-    border-radius: 0.3rem;
-    padding: 4rem 2rem 1rem 2rem;
+    border-radius: 0.5rem 0.5rem 0.5rem 0.5rem;
     margin: 0 1rem 0 1rem;
-    
+}
+
+main .two p, main .two h2{
+    padding-left: 1rem;
+    padding-right: 1rem;
 }
 
 main .three{
@@ -105,20 +114,43 @@ main .three img{
 }
 
 main .four{
-    padding: 2rem;
+    size: 100%;
+    height: 100%;
+    width: auto;
+    padding-bottom: 4rem;
+    text-align: center;
+}
+
+main .four .four-info p{
+    padding-bottom: 2rem;
+}
+
+main .four .four-info p, main .four .four-info h2{
+    text-align: left;
+    padding-left: 1rem;
+    padding-right: 1rem;
 }
 
 main .four .four-info a{
     color: black;
 }
 
-main .four .four-table thead, tbody{
-    background-color: rgb(218, 211, 211); 
+main .four .four-table table, thead, tbody{
+    background-color: rgb(235, 230, 230);
+    border-bottom-left-radius: 0.5rem; 
+    border-bottom-right-radius: 0.5rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+main .four .four-table table{
+    height: auto;
+    max-width: 300px;
 }
 
 main .four .four-table img{
-    max-height: 280px;
-    max-width: 280px;
+    height: auto;
+    max-width: 100%;
 }
 
 main .four .four-table .gloop{
@@ -151,8 +183,60 @@ main .four .four-table .days{
     text-align: right;
 }
 
-main .one .text h1{
+
+
+main .six .mysix{
+    margin: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid: gap 1rem;
+    grid-auto-rows: minmax(100px, auto);
+    display: block;
+}
+
+main .six .mysix .right{
+    padding-top: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: 100px;
+    grid-gap: 1rem;
+}
+
+main .six .mysix .left p, main .six .mysix .left a{
+    color: grey;
+}
+
+main .six .mysix .left a:hover{
+    color: blue;
+}
+
+
+
+main .six .mysix .right tr, main .six .mysix .right th, main .six .mysix .right td{
+    background-color: white;
+}
+
+main .six .mysix .right th{
     text-align: left;
+    padding-bottom: 1rem;
+}
+
+main .six .mysix .right td a:hover{
+    color: blue;
+}
+
+main .six .mysix .right a{
+    color: grey;
+    text-decoration: none;
+}
+
+footer{
+    padding: 2rem;
+    color: rgb(187, 184, 184);
+}
+
+footer .pad2{
+    visibility: hidden;
 }
 
 @media only screen and (min-width:768px){
@@ -185,6 +269,12 @@ main .one .image img, main .five .image img{
     height: 300px;
 }
 
+main .two{
+    padding: 4rem 2rem 1rem 2rem;
+    margin: 0 1rem 0 1rem;
+    border-radius: 0.5rem 0.5rem 1rem 1rem;
+}
+
 main .three{
     display: flex;
     justify-content: space-between;
@@ -199,7 +289,6 @@ main .four-table{
     display: grid;
     grid-auto-rows: auto;
     grid-template-columns: auto;
-    grid-gap: 1rem;
     grid-template-areas: 
     "grid1 grid3 grid5 grid7"
     "grid2 grid4 grid6 grid8"
@@ -236,4 +325,34 @@ main .four .four-table .grid7{
 
 main .four .four-table .grid8{
     grid-area: grid8;
+}
+
+main .six .mysix .right{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-auto-rows: 100px;
+    grid-gap: 1rem;
+}
+
+main .six .mysix .right tr, main .six .mysix .right th, main .six .mysix .right td{
+    padding-right: 5rem;
+}
+
+main .six .mysix{
+    margin: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid: gap 1rem;
+    grid-auto-rows: minmax(100px, auto);
+}
+
+footer{
+    display: flex;
+    padding: 2rem;
+    color: rgb(187, 184, 184);
+    justify-content: space-between;
+}
+
+footer .pad2{
+    visibility: visible;
 }
