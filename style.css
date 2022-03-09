@@ -74,9 +74,7 @@ main .one .text button, main .five .text button{
     border-radius: 1.5rem 1.5rem 1.5rem 1.5rem;
     cursor: pointer;
     padding: 0.5rem 2rem 0.5rem 2rem;
-    
 }
-
 
 main .one .image img, main .five .image img{
     display: block;
@@ -106,10 +104,12 @@ main .two p, main .two h2{
 
 main .three{
     padding: 2rem;
-    display: block;
+    display: flex;
+    flex-direction: column;
 }
 
 main .three img{
+    width: 200px;
     padding: 1rem;
 }
 
@@ -183,15 +183,14 @@ main .four .four-table .days{
     text-align: right;
 }
 
+main .five{
+    border-top: 1px solid rgb(223, 220, 220);
+    border-bottom: 1px solid rgb(223, 220, 220);
+}
 
 
-main .six .mysix{
-    margin: 2rem;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid: gap 1rem;
-    grid-auto-rows: minmax(100px, auto);
-    display: block;
+main .six{
+    padding: 1rem;
 }
 
 main .six .mysix .right{
@@ -209,8 +208,6 @@ main .six .mysix .left p, main .six .mysix .left a{
 main .six .mysix .left a:hover{
     color: blue;
 }
-
-
 
 main .six .mysix .right tr, main .six .mysix .right th, main .six .mysix .right td{
     background-color: white;
@@ -239,7 +236,7 @@ footer .pad2{
     visibility: hidden;
 }
 
-@media only screen and (min-width:768px){
+@media only screen and (min-width:992px){
 
 header{
     text-align: right;
@@ -277,8 +274,10 @@ main .two{
 
 main .three{
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     padding: 3rem 0 3rem 0;
+    flex-wrap: wrap;
 }
 
 main .four{
@@ -345,6 +344,7 @@ main .six .mysix{
     grid: gap 1rem;
     grid-auto-rows: minmax(100px, auto);
 }
+
 
 footer{
     display: flex;
